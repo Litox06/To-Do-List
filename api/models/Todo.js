@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose'), timestamps = require('mongoose-timestamp')
 const Schema = mongoose.Schema;
 
 const TodoSchema = new Schema({ // Creating To-do Schema
@@ -12,7 +12,7 @@ const TodoSchema = new Schema({ // Creating To-do Schema
     },
     timestamp: {
         type: String,
-        default: Date.now()
+        default: Date()
     }
 })
 
