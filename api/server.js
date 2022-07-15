@@ -37,13 +37,13 @@ app.post("/todo/new", (req, res) => { // POST REQUEST: Create new To-do in our M
     res.json(todo); // Pass us back new To-do to add it to our list
 })
 
-app.delete("/todo/delete/:id", async (req, res) => { // DELETE REQUEST: Find To-do ID in Mongodb and delete from collection
+app.delete("/todo/delete/:id", async (req, res) => { // DELETE REQUEST: Find To-do ID in MongoDB and delete from collection
     const result = await Todo.findByIdAndDelete(req.params.id); // Built-in Mongoose function to find the ID and delete it
 
     res.json(result);
 });
 
-app.put("/todo/complete/:id", async (req, res) => { // UPDATE REQUEST: 
+app.put("/todo/complete/:id", async (req, res) => { // UPDATE REQUEST: Find To-do ID in MongoDB and update the complete in the collection
     const todo = await Todo.findById(req.params.id) // Built-in Mongoose function
 
     todo.complete = !todo.complete; // Flip the complete value
