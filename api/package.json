@@ -19,9 +19,9 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.18.1",
-    "mongoose": "^6.4.4"
-  },
-  "devDependencies": {
+    "moment": "^2.29.4",
+    "mongoose": "^6.4.4",
+    "mongoose-timestamp": "^0.6.0",
     "nodemon": "^2.0.19"
   }
 }
