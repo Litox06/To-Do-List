@@ -90,19 +90,26 @@ h4 {
   text-decoration: line-through;
 }
 
+.todo .update-task {
+  position: absolute;
+  top: 50%;
+  right: 50px;
+  transform: translateY(-50%);
+  /* Moving checkbox in vertical position */
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .todo .delete-todo {
   position: absolute;
   top: 50%;
   right: 15px;
   transform: translateY(-50%);
-  /* Moving checkbox in vertical position */
-
   width: 25px;
   height: 25px;
-  color: var(--light);
-  background-color: #AF1E2D;
-  border-radius: 50%;
-
   display: flex;
   align-items: center;
   justify-content: center;
