@@ -70,7 +70,7 @@ function App() {
 
               <div className="text">{todo.text}</div>
 
-              <div className="date">Date created: {todo.timestamp}</div>
+              <div className="date">Date created: {new Date(todo.timestamp).toDateString()}</div>
 
               <div className="delete-todo" onClick={(e) => {
                 e.stopPropagation(); // Prevents propagation of the same event from being called

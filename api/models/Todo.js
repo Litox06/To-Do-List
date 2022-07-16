@@ -14,7 +14,7 @@ const TodoSchema = new Schema({ // Creating To-do Schema
         type: String,
         default: Date()
     }
-})
+});
 
 const Todo = mongoose.model("Todo", TodoSchema) // Creating the Mongoose model, naming it and passing the Schema
 
