@@ -61,7 +61,7 @@ function App() {
       <h4>Your tasks</h4>
 
       <div className="todos">
-        {todos.map(todo => ( // Adding unique ID to each To-do child in the mapping
+        {todos.length > 0 ? todos.map(todo => ( // Adding unique ID to each To-do child in the mapping
           <div className={
               "todo " + (todo.complete ? "is-complete" : "") // Check if tasks are completed
             } key={todo._id} onClick={() => completeTodo(todo._id)}>
@@ -78,7 +78,9 @@ function App() {
               }}
               >X</div>
           </div>
-        ))}
+        )) : (
+					<p>You currently have no tasks</p>
+				)}
       </div>
 
       <div className="addPopup" onClick={() => setPopupActive(true)}>+</div>
