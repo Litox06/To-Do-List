@@ -7,7 +7,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-mongoose.connect("mongodb://127.0.0.1:27017/mern-todo", { // Mongoose connection options
+mongoose.connect("mongodb://127.0.0.1:27017/mern-todo", { // Mon`goose connection options
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
@@ -43,7 +43,7 @@ app.delete("/todo/delete/:id", async (req, res) => { // DELETE REQUEST: Find To-
     res.json(result);
 });
 
-app.put("/todo/complete/:id", async (req, res) => { // UPDATE REQUEST: Find To-do ID in MongoDB and update the complete in the collection
+app.get("/todo/complete/:id", async (req, res) => { // Find To-do ID in MongoDB and update the complete in the collection
     const todo = await Todo.findById(req.params.id) // Built-in Mongoose function
 
     todo.complete = !todo.complete; // Flip the complete value
@@ -52,4 +52,5 @@ app.put("/todo/complete/:id", async (req, res) => { // UPDATE REQUEST: Find To-d
 
     res.json(todo);
 })
+
 app.listen(3001, () => console.log("Server started on port: 3001"));   

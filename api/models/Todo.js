@@ -1,4 +1,4 @@
-const mongoose = require('mongoose'), timestamps = require('mongoose-timestamp')
+const mongoose = require('mongoose')
 const Schema = mongoose.Schema;
 
 const TodoSchema = new Schema({ // Creating To-do Schema
